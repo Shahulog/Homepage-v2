@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import {
   TextField,
   CircularProgress,
+  InputAdornment,
 } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -19,6 +20,7 @@ import {
   LoadingIndicator,
   animations,
 } from '../../styles/ContactForm';
+import { MdPerson, MdEmail, MdSubject, MdMessage } from 'react-icons/md';
 
 /**
  * @typedef {Object} ContactFormData
@@ -141,9 +143,16 @@ const ContactForm = () => {
                 error={!!errors.name}
                 helperText={errors.name?.message}
                 disabled={isSubmitting}
+                placeholder="例：しゃふろぐ"
                 // ログイン状態の場合は編集可能
                 InputProps={{
+                  
                   readOnly: !session?.user,
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MdPerson />
+                    </InputAdornment>
+                  ),
                 }}
               />
             )}
@@ -164,9 +173,15 @@ const ContactForm = () => {
                 error={!!errors.email}
                 helperText={errors.email?.message}
                 disabled={isSubmitting}
+                placeholder="例：shahulog@gmail.com"
                 // ログイン状態の場合は編集可能
                 InputProps={{
                   readOnly: !session?.user,
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MdEmail />
+                    </InputAdornment>
+                  ),
                 }}
               />
             )}
@@ -186,6 +201,15 @@ const ContactForm = () => {
                 error={!!errors.subject}
                 helperText={errors.subject?.message}
                 disabled={isSubmitting}
+                placeholder="例：Xでフォローしたのでフォロバしてください"
+                // 件名フィールド
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MdSubject />
+                    </InputAdornment>
+                  ),
+                }}
               />
             )}
           />
@@ -206,6 +230,15 @@ const ContactForm = () => {
                 error={!!errors.message}
                 helperText={errors.message?.message}
                 disabled={isSubmitting}
+                placeholder="例：〇〇って名前です。今日中におねがいね。"
+                // 本文フィールド
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MdMessage />
+                    </InputAdornment>
+                  ),
+                }}
               />
             )}
           />
