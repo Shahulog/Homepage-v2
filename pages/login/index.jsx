@@ -38,6 +38,8 @@ export default function Home() {
           Sign in with Google
           <FaGoogle style={{ marginLeft: 10 }} />
         </Button>
+       {/**
+         //TODO: ここにソーシャルログインのボタンを追加
         <Button 
           variant="outlined" 
           color="primary" 
@@ -189,6 +191,8 @@ export default function Home() {
           Sign in with Line
           <FaLine style={{ marginLeft: 10 }} />
         </Button>
+        */}
+        
       </Box>
     </Container>
   );
