@@ -1,4 +1,4 @@
-import { createOTP } from '../../../models/OTP';
+import { createOTP } from '../../lib/otp';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
