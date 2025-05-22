@@ -18,7 +18,7 @@ import {
   SuccessMessage,
   LoadingIndicator,
   animations,
-} from './styles';
+} from '../../styles/ContactForm';
 
 /**
  * @typedef {Object} ContactFormData
