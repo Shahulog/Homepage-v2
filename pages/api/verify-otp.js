@@ -1,4 +1,4 @@
-import { verifyOTP } from '../../lib/otp';
+import { verifyOTP } from './otp';
 import { getSession } from 'next-auth/react';
 
 export default async function handler(req, res) {

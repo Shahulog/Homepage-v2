@@ -1,4 +1,4 @@
-import clientPromise from '../pages/api/mongodb';
+import clientPromise from './mongodb';
 
 export async function createOTP(email) {
   const client = await clientPromise;
