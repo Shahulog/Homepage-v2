@@ -32,10 +32,9 @@
     "zod": "^3.25.20"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
-    "tailwindcss": "^4"
+    "eslint-config-next": "15.3.2"
   }
 }
