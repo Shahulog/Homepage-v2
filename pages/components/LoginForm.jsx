@@ -41,7 +41,7 @@ export default function LoginForm() {
     setError("");
 
     signIn("credentials", {
-      redirect: false,
+      redirect: true,
       email: formData.email,
       password: formData.password,
       callbackUrl: "/",

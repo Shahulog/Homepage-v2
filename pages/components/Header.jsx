@@ -18,19 +18,24 @@ const Header = () => {
       }}
     >
       <Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{ flexGrow: 1, color: '#333333' }}
-        >
-          Shahulog
-        </Typography>
+      <Link href="/" style={{ textDecoration: 'none', flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ 
+              color: '#333333',
+              '&:hover': {
+                color: '#666666', // ホバー時の色を少し薄く
+                transition: 'color 0.2s ease-in-out'
+              }
+            }}
+          >
+            Shahulog
+          </Typography>
+        </Link>
         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
           <Link href="/" underline="hover" color="inherit" sx={{ color: '#333333' }}>
             ホーム
-          </Link>
-          <Link href="/blog" underline="hover" color="inherit" sx={{ color: '#333333' }}>
-            ブログ
           </Link>
           <Link href="/contact" underline="hover" color="inherit" sx={{ color: '#333333' }}>
             お問い合わせ

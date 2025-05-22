@@ -1,13 +1,31 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Button, Container, Box } from "@mui/material";
 import { FaGoogle, FaGithub, FaTwitter, FaFacebook, FaLinkedin, FaApple, FaMicrosoft, FaYahoo, FaAmazon, FaDiscord, FaTwitch, FaSpotify, FaReddit, FaPinterest, FaTelegram, FaLine } from "react-icons/fa";
-
+import { MdEmail } from "react-icons/md";
 import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
-  
-
+  /*
+  const [error, setError] = useState("");
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signIn("google", {
+        callbackUrl: "/",
+        redirect: false
+      });
+      
+      if (result?.error) {
+        setError("ログインに失敗しました。もう一度お試しください。");
+      } else if (result?.url) {
+        router.push(result.url);
+      }
+    } catch (error) {
+      setError("予期せぬエラーが発生しました。");
+      console.error("Sign in error:", error);
+    }
+  };
+*/
   return (
     <Container maxWidth="sm">
       <Box
@@ -28,18 +46,20 @@ export default function Home() {
           onClick={() => {router.push("/login/email")}}
         >
           Sign in With Email
+          <MdEmail style={{ marginLeft: 10 }} />
         </Button>
-        <Button 
+       
+       {/**
+         //TODO: ここにソーシャルログインのボタンを追加
+          <Button 
           variant="outlined" 
           color="primary" 
           fullWidth
-          onClick={() => signIn("google",{ callbackUrl: "/", redirect: true })}
+          onClick={handleGoogleSignIn}
         >
           Sign in with Google
           <FaGoogle style={{ marginLeft: 10 }} />
         </Button>
-       {/**
-         //TODO: ここにソーシャルログインのボタンを追加
         <Button 
           variant="outlined" 
           color="primary" 

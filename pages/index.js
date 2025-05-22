@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 export default function Home() {
   const {data: session} = useSession();
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <div>
       <Header />
+      <ContactForm />
       <Footer />
     </div>
   );
