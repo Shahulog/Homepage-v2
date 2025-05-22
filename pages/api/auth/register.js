@@ -1,4 +1,4 @@
-import clientPromise from "../../lib/mongodb";
+import clientPromise from "../../../lib/mongodb";
 import { hash } from "bcryptjs";
 import { NextResponse } from "next/server";
 

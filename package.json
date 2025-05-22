@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/credential-providers": "^3.812.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@mongodb-js/zstd": "^1.2.2",
     "@mui/material": "^7.1.0",
     "@next-auth/mongodb-adapter": "^1.1.3",
+    "aws4": "^1.13.2",
     "bcryptjs": "^3.0.2",
+    "kerberos": "^2.2.2",
     "mongodb": "^5.9.2",
+    "mongodb-client-encryption": "^2.9.1",
     "mui": "^0.0.1",
     "next": "15.3.2",
     "next-auth": "^4.24.11",
@@ -23,6 +28,7 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.4",
     "react-icons": "^5.5.0",
+    "snappy": "^7.2.2",
     "zod": "^3.25.20"
   },
   "devDependencies": {
