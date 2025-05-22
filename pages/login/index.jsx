@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
-  /*
+  
   const [error, setError] = useState("");
   const handleGoogleSignIn = async () => {
     try {
@@ -25,7 +25,7 @@ export default function Home() {
       console.error("Sign in error:", error);
     }
   };
-*/
+
   return (
     <Container maxWidth="sm">
       <Box
@@ -48,10 +48,7 @@ export default function Home() {
           Sign in With Email
           <MdEmail style={{ marginLeft: 10 }} />
         </Button>
-       
-       {/**
-         //TODO: ここにソーシャルログインのボタンを追加
-          <Button 
+        <Button 
           variant="outlined" 
           color="primary" 
           fullWidth
@@ -60,6 +57,9 @@ export default function Home() {
           Sign in with Google
           <FaGoogle style={{ marginLeft: 10 }} />
         </Button>
+       {/**
+         //TODO: ここにソーシャルログインのボタンを追加
+          
         <Button 
           variant="outlined" 
           color="primary" 
