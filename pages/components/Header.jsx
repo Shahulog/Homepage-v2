@@ -37,7 +37,7 @@ const Header = () => {
           </Link>
           {session?.user ? (
             <>
-              <span className='text-black'>{session?.user?.name || "名無し"}さん</span>
+              <Typography variant="body1" color="inherit" sx={{ color: '#333333' }}>{session?.user?.name || "名無し"}さん</Typography>
               <LoginoutButton />
             </>
           ) : (

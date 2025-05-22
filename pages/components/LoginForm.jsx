@@ -44,13 +44,13 @@ export default function LoginForm() {
       redirect: false,
       email: formData.email,
       password: formData.password,
+      callbackUrl: "/",
     })
       .then((result) => {
         if (result?.error) {
           setError("メールアドレスまたはパスワードが正しくありません。");
         } else {
-          router.push('/');
-          router.refresh();
+         
         }
       })
       .catch((error) => {

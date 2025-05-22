@@ -33,7 +33,7 @@ export default function Home() {
           variant="outlined" 
           color="primary" 
           fullWidth
-          onClick={() => signIn("google")}
+          onClick={() => signIn("google",{ callbackUrl: "/", redirect: true })}
         >
           Sign in with Google
           <FaGoogle style={{ marginLeft: 10 }} />
