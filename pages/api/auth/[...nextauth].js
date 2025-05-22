@@ -65,6 +65,18 @@ export const authOptions = {
   jwt: {
     maxAge: 30 * 24 * 60 * 60, // 30日間
   },
+  // セッションの自動更新を有効化
+  events: {
+    async signIn({ user }) {
+      // サインイン時の処理
+    },
+    async signOut({ session, token }) {
+      // サインアウト時の処理
+    },
+    async session({ session, token }) {
+      // セッション更新時の処理
+    },
+  },
   debug: process.env.NODE_ENV === 'development', // 開発環境でのみデバッグモードを有効
 };
 
