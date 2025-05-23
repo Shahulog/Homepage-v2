@@ -3,6 +3,7 @@ import { Button, Container, Box } from "@mui/material";
 import { FaGoogle, FaGithub, FaTwitter, FaFacebook, FaLinkedin, FaApple, FaMicrosoft, FaYahoo, FaAmazon, FaDiscord, FaTwitch, FaSpotify, FaReddit, FaPinterest, FaTelegram, FaLine } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
