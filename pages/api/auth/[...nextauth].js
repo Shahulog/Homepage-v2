@@ -61,7 +61,7 @@ export const authOptions = {
       return session;
     },
   },
-  secret: process.env.NEXTAUTH_SECRET, // 環境変数から設定
+  secret: process.env.NEXT_PUBLIC_SECRET, // 環境変数から設定
   jwt: {
     maxAge: 30 * 24 * 60 * 60, // 30日間
   },
