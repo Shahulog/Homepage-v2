@@ -14,6 +14,13 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
     }),
     CredentialsProvider({
       name: "Credentials",
@@ -61,7 +68,7 @@ export const authOptions = {
       return session;
     },
   },
-  secret: process.env.NEXT_PUBLIC_SECRET, // 環境変数から設定
+  secret: process.env.NEXTAUTH_SECRET, // 環境変数から設定
   jwt: {
     maxAge: 30 * 24 * 60 * 60, // 30日間
   },

@@ -49,7 +49,10 @@ export default function Home() {
           Sign in With Email
           <MdEmail style={{ marginLeft: 10 }} />
         </Button>
-        <Button 
+        
+       {/**
+         //TODO: ここにソーシャルログインのボタンを追加
+          <Button 
           variant="outlined" 
           color="primary" 
           fullWidth
@@ -58,9 +61,6 @@ export default function Home() {
           Sign in with Google
           <FaGoogle style={{ marginLeft: 10 }} />
         </Button>
-       {/**
-         //TODO: ここにソーシャルログインのボタンを追加
-          
         <Button 
           variant="outlined" 
           color="primary" 
