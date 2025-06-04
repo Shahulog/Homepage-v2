@@ -1,0 +1,14 @@
+# .github/workflows/test.yml
+name: Run Tests
+
+on:
+  pull_request:
+    branches: [main]  # PRがmainに向いているときに実行
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npm test  # テスト実行（言語に応じて変更）
